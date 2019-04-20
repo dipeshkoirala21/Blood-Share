@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "178155696145",
+    "firebase_url": "https://shareblood-3f8b1.firebaseio.com",
+    "project_id": "shareblood",
+    "storage_bucket": "shareblood.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:178155696145:android:081bf3771c8b5839",
+        "android_client_info": {
+          "package_name": "anmol.com.shareblood"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "178155696145-u4p7g7fc5u0qcik5vvh5e8i9d1pmkk4m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "anmol.com.shareblood",
+            "certificate_hash": "d706e0f9b946e731f43bce0b9e2598aa7b718bc0"
+          }
+        },
+        {
+          "client_id": "178155696145-sp743lh4aasmvh26bgd8ci748uco5mau.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAOUn7upo_1n4itvkuYIF3k_FAB5gJ8UJw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "178155696145-sp743lh4aasmvh26bgd8ci748uco5mau.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
