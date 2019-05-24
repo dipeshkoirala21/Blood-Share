@@ -54,10 +54,10 @@ public class RequestBloodActivity extends AppCompatActivity {
         setContentView(R.layout.activity_request_blood);
 
         name = "";
-        toolbar = findViewById(R.id.requestToolbar);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Request Blood");
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//        toolbar = findViewById(R.id.requestToolbar);
+//        setSupportActionBar(toolbar);
+//        getSupportActionBar().setTitle("Request Blood");
+//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         etName = findViewById(R.id.etName);
         etAddress = findViewById(R.id.etAddress);

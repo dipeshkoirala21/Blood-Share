@@ -50,7 +50,7 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
             case 1:
                 return "Hospitals";
             case 2:
-                return "Users";
+                return "Events";
             default:
                 return null;
         }

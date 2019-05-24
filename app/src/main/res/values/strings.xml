@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">LifeShare</string>
+    <string name="app_name">Share Blood</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
@@ -31,4 +31,7 @@
     </string-array>
     <string name="title_activity_maps">Map</string>
     <string name="my_profile">My Profile</string>
+    <string name="feedback">Feedback</string>
+    <string name="create_events">Create Events</string>
+    <string name="organizer">Organizer</string>
 </resources>

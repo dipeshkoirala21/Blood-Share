@@ -18,12 +18,12 @@ import anmol.com.shareblood.R;
  * Created by sukrit on 20/2/18.
  */
 
-public class UsersRecyclerAdapter extends RecyclerView.Adapter<UsersRecyclerAdapter.UsersViewHolder> {
+public class EventRecyclerAdapter extends RecyclerView.Adapter<EventRecyclerAdapter.UsersViewHolder> {
 
     ArrayList<User> arrayList;
     Context context;
 
-    public UsersRecyclerAdapter(ArrayList<User> arrayList, Context context) {
+    public EventRecyclerAdapter(ArrayList<User> arrayList, Context context) {
         this.arrayList = arrayList;
         this.context = context;
     }

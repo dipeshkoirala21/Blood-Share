@@ -7,8 +7,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="anmol.com.shareblood.RequestBloodActivity">
 
-    <include layout="@layout/app_bar_layout"
-        android:id="@+id/requestToolbar" />
 
 <LinearLayout
     android:layout_width="match_parent"
@@ -17,7 +15,6 @@
     android:layout_marginStart="7dp"
     android:layout_marginEnd="7dp"
     android:layout_marginTop="7dp"
-    android:layout_below="@+id/requestToolbar"
     android:layout_marginBottom="5dp">
 
     <LinearLayout
@@ -158,11 +155,12 @@
             android:id="@+id/tvBloodGroup"/>
 
         <Spinner
+            android:id="@+id/spinnerBloodGroup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="start"
             android:layout_gravity="center"
-            android:id="@+id/spinnerBloodGroup"/>
+            android:entries="@array/blood_group"
+            android:gravity="start" />
 
     </LinearLayout>
 
@@ -223,23 +221,17 @@
         android:id="@+id/LLrequiredUpto"
         android:background="@drawable/border"
         android:padding="9dp">
-
-        <TextView
-            android:layout_width="wrap_content"
+        <EditText
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Required Upto"
-            android:textColor="@android:color/darker_gray"
+            android:layout_marginTop="6dp"
+            android:hint="Required up to Date: "
+            android:background="@drawable/border"
+            android:padding="9dp"
             android:textSize="18sp"
-            android:id="@+id/tvRequiredUpto"/>
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:text="Pick date"
-            android:id="@+id/pickDate"
-            android:layout_marginStart="32dp"
-            android:background="@color/colorPrimary"
-            android:textColor="#ffffff"
-            android:layout_marginLeft="32dp" />
+            android:textColor="#000000"
+            android:id="@+id/tvRequiredUpto"
+            android:inputType="date"/>
     </LinearLayout>
 
         <EditText

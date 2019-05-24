@@ -77,6 +77,7 @@ public class MainActivity extends AppCompatActivity {
         viewFlipper.startFlipping();
         fabRequestBlood = findViewById(R.id.fabRequestBlood);
         fabRequestBlood.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, RequestBloodActivity.class);
@@ -115,8 +116,16 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
             finish();
             return true;
+
         }else if (id == R.id.action_profile){
             Intent intent = new Intent(MainActivity.this,ProfileActivity.class);
+            startActivity(intent);
+        }else if (id == R.id.action_feedback){
+            Intent intent = new Intent(MainActivity.this,FeedbackActivity.class);
+            startActivity(intent);
+        }
+        else if (id == R.id.action_events){
+            Intent intent = new Intent(MainActivity.this,EventsActivity.class);
             startActivity(intent);
         }
 

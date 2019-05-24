@@ -19,7 +19,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-import anmol.com.shareblood.Adapters.UsersRecyclerAdapter;
+import anmol.com.shareblood.Adapters.EventRecyclerAdapter;
 import anmol.com.shareblood.Models.User;
 import anmol.com.shareblood.R;
 
@@ -28,9 +28,9 @@ import anmol.com.shareblood.R;
  */
 public class ThirdFragment extends Fragment {
 
-    DatabaseReference mDatabaseUsers;
+    DatabaseReference mDatabaseEvents;
     RecyclerView thirdRV;
-    UsersRecyclerAdapter usersRecyclerAdapter;
+    EventRecyclerAdapter usersRecyclerAdapter;
     public static final String TAG="ALL";
     View fragmentRootView;
 
@@ -49,22 +49,22 @@ public class ThirdFragment extends Fragment {
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         thirdRV.setLayoutManager(layoutManager);
         final ArrayList<User> arrayList = new ArrayList<>();
-        mDatabaseUsers = FirebaseDatabase.getInstance().getReference().child("Users");
-        mDatabaseUsers.keepSynced(true);
+        mDatabaseEvents = FirebaseDatabase.getInstance().getReference().child("Event");
+        mDatabaseEvents.keepSynced(true);
 
-        mDatabaseUsers.addValueEventListener(new ValueEventListener() {
+        mDatabaseEvents.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 arrayList.clear();
                 for(DataSnapshot userSnapshot: dataSnapshot.getChildren())
                 {
                     String name = userSnapshot.child("name").getValue().toString();
-                    String email = userSnapshot.child("email").getValue().toString();
+                    String email = userSnapshot.child("description").getValue().toString();
                     arrayList.add(new User(name,email));
                     Log.d(TAG, "onDataChange: "+userSnapshot);
                 }
-                usersRecyclerAdapter = new UsersRecyclerAdapter(arrayList,getActivity());
-                thirdRV.setAdapter(new UsersRecyclerAdapter(arrayList,getActivity()));
+                usersRecyclerAdapter = new EventRecyclerAdapter(arrayList,getActivity());
+                thirdRV.setAdapter(new EventRecyclerAdapter(arrayList,getActivity()));
             }
 
             @Override
@@ -80,9 +80,9 @@ public class ThirdFragment extends Fragment {
 
     public void setRecyclerView(ArrayList<User> arrayList)
     {
-        usersRecyclerAdapter = new UsersRecyclerAdapter(arrayList,getActivity());
+        usersRecyclerAdapter = new EventRecyclerAdapter(arrayList,getActivity());
         thirdRV.setLayoutManager(new LinearLayoutManager(getActivity()));
-        thirdRV.setAdapter(new UsersRecyclerAdapter(arrayList,getActivity()));
+        thirdRV.setAdapter(new EventRecyclerAdapter(arrayList,getActivity()));
     }
 
 }

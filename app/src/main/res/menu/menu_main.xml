@@ -8,8 +8,20 @@
         android:title="@string/my_profile"
         app:showAsAction="never" />
     <item
+        android:id="@+id/action_events"
+        android:orderInCategory="100"
+        android:title="@string/create_events"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_feedback"
+        android:orderInCategory="100"
+        android:title="@string/feedback"
+        app:showAsAction="never" />
+
+    <item
         android:id="@+id/action_settings"
         android:orderInCategory="100"
         android:title="@string/action_settings"
         app:showAsAction="never" />
+
 </menu>

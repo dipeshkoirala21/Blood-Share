@@ -1,8 +1,8 @@
-package dipesh.com.emergencyalertsystem.feedback;
+package anmol.com.shareblood;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
@@ -10,8 +10,6 @@ import android.widget.EditText;
 import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import dipesh.com.emergencyalertsystem.R;
 
 public class FeedbackActivity extends AppCompatActivity {
 
@@ -25,10 +23,10 @@ public class FeedbackActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_feedback);
 
-        Toolbar toolbar =  findViewById(R.id.toolbar);
-        toolbar.setNavigationIcon(android.support.v7.appcompat.R.drawable.abc_ic_ab_back_material);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//        Toolbar toolbar =  findViewById(R.id.toolbar);
+//        toolbar.setNavigationIcon(android.support.v7.appcompat.R.drawable.abc_ic_ab_back_material);
+//        setSupportActionBar(toolbar);
+//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         mRatingBar = (RatingBar) findViewById(R.id.ratingBar);
         mRatingScale = (TextView) findViewById(R.id.tvRatingScale);
@@ -72,7 +70,7 @@ public class FeedbackActivity extends AppCompatActivity {
                    // Toast.makeText(FeedbackActivity.this, "Thank you for sharing your feedback", Toast.LENGTH_SHORT).show();
                     Intent Email = new Intent(Intent.ACTION_SEND);
                     Email.setType("text/email");
-                    Email.putExtra(Intent.EXTRA_EMAIL, new String[] { "dipeshkoirala21@gmail.com" });
+                    Email.putExtra(Intent.EXTRA_EMAIL, new String[] { "lonzo.precious.30@gmail.com" });
                     Email.putExtra(Intent.EXTRA_SUBJECT, "Feedback");
                     Email.putExtra(Intent.EXTRA_TEXT, "Hello Developer,\n"+ "This Application is: "+mRatingScale.getText().toString()+"\n"+mFeedback.getText().toString());
                    // Email.putExtra(Intent.EXTRA_TEXT, "\n"+mFeedback.getText().toString());

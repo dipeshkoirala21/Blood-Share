@@ -155,7 +155,7 @@ public class SecondFragment extends Fragment implements OnMapReadyCallback {
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
         final ArrayList<LatLng> latLngArrayList = new ArrayList<>();
-        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET,"https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=28.535516,77.391026&radius=5000&type=hospital&key=AIzaSyD8Dq6-5ZHwAYlYyE8-AJBtjcD_IXqnUAg", null, new Response.Listener<JSONObject>() {
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET,"https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=27.737816,85.337080&radius=5000&type=hospital&key=AIzaSyD8Dq6-5ZHwAYlYyE8-AJBtjcD_IXqnUAg", null, new Response.Listener<JSONObject>() {
                 @Override
                 public void onResponse(JSONObject response) {
                     try {
