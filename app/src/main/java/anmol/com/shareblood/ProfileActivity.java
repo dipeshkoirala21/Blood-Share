@@ -51,7 +51,7 @@ public class ProfileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
-        userName =findViewById(R.id.userName);
+      //  userName =findViewById(R.id.userName);
 
         profileImage = findViewById(R.id.userProfileImage);
         navUserName = findViewById(R.id.userName);

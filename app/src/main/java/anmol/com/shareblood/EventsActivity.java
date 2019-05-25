@@ -33,9 +33,9 @@ import anmol.com.shareblood.Models.UserDetails;
 
 public class EventsActivity extends AppCompatActivity {
 
-    EditText etName,etDescription,etLocation,etDate,etTime;
+    EditText etName,etDescription,etLocation,etDate,etTime,etContact;
     Button btnSubmit;
-    String description,name,location,date,time,uid, organizer;
+    String description,name,location,date,time,uid, organizer,contact;
 
 
     DatabaseReference mDatabaseNeeds,mDatabaseUsers,mDatabaseEvents;
@@ -94,6 +94,7 @@ public class EventsActivity extends AppCompatActivity {
                 location = etLocation.getText().toString();
                 date = etDate.getText().toString();
                 time = etTime.getText().toString();
+                contact=etContact.getText().toString();
 
 //                Log.d("TTT", "onClick: bloodFor = " + bloodFor + "\n" +
 //                        "bloodGroup = " + bloodGroup + "\n" +
@@ -109,6 +110,7 @@ public class EventsActivity extends AppCompatActivity {
                 if (TextUtils.isEmpty(organizer) ||
                         TextUtils.isEmpty(description) ||
                         TextUtils.isEmpty(name) ||
+                        TextUtils.isEmpty(contact) ||
                         TextUtils.isEmpty(location) ||
                         TextUtils.isEmpty(date) ||
                         TextUtils.isEmpty(time) ||
@@ -116,7 +118,7 @@ public class EventsActivity extends AppCompatActivity {
                     Toast.makeText(EventsActivity.this, "All details Required !!", Toast.LENGTH_SHORT).show();
                 } else {
                     organizer = radioButton.getText().toString();
-                    event = new Event(name, description, location, date, time,uid,"message",organizer);
+                    event = new Event(name, description, location, date, time,uid,contact,organizer);
                     //requestModel = new Request(bloodUnits, bloodGroup, "20-06-2018", "false", bloodFor, gender);
 
                     mDatabaseEvents.push().setValue(event)
@@ -139,6 +141,7 @@ public class EventsActivity extends AppCompatActivity {
     public void initializeViews()
     {
         etName = findViewById(R.id.etName);
+        etContact = findViewById(R.id.etContact);
         etDescription = findViewById(R.id.etDescription);
         etLocation = findViewById(R.id.etLocation);
         etDate = findViewById(R.id.etDate);

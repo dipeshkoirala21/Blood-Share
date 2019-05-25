@@ -128,6 +128,11 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(MainActivity.this,EventsActivity.class);
             startActivity(intent);
         }
+        else if (id == R.id.action_about){
+            Intent intent = new Intent(MainActivity.this,AboutActivity.class);
+            startActivity(intent);
+        }
+
 
         return super.onOptionsItemSelected(item);
     }

@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".EventsActivity">
 
@@ -75,10 +73,22 @@
             android:id="@+id/etName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="number"
+            android:inputType="text"
             android:layout_marginTop="6dp"
             android:textColor="#000000"
             android:hint="Organizer's Name"
+            android:padding="9dp"
+            android:textSize="18sp"
+            android:background="@drawable/border"/>
+
+        <EditText
+            android:id="@+id/etContact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:layout_marginTop="6dp"
+            android:textColor="#000000"
+            android:hint="Contact"
             android:padding="9dp"
             android:textSize="18sp"
             android:background="@drawable/border"/>

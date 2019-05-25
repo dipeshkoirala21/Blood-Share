@@ -9,8 +9,8 @@ public class User
     String userName;
     String userDonations;
 
-    public User() {
-    }
+//    public User(String name, String description, String location, String date, String contact, String time) {
+//    }
 
     public User(String userName, String userDonations) {
         this.userName = userName;

@@ -7,7 +7,7 @@ public class Event {
     String date;
     String time;
     String uid;
-    String radioGroup;
+    String contact;
 
     public String getDescription() {
         return description;
@@ -57,23 +57,28 @@ public class Event {
         this.uid = uid;
     }
 
-    public String getRadioGroup() {
-        return radioGroup;
+    public String getContact() {
+        return contact;
     }
 
-    public void setRadioGroup(String radioGroup) {
-        this.radioGroup = radioGroup;
+    public void setContact(String contact) {
+        this.contact = contact;
     }
 
-    public Event(String description, String name, String location, String date, String time, String uid, String radioGroup, String organizer) {
+
+    public Event() {}
+
+    public Event(String description, String name, String location, String date, String time, String uid, String contact, String organizer) {
         this.description = description;
         this.name = name;
         this.location = location;
         this.date = date;
         this.time = time;
         this.uid = uid;
-        this.radioGroup = radioGroup;
+        this.contact = contact;
     }
+
+
 
 
 }
